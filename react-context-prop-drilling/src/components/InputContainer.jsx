@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-const InputContainer = () => {
+const InputContainer = ({ addTodoHandler }) => {
   const [todo, setTodo] = useState("");
 
   const submitHandler = () => {
-    console.log(todo);
+    addTodoHandler(todo);
   };
   return (
     <>
