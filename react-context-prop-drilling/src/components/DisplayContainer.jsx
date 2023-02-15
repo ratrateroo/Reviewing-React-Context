@@ -4,7 +4,7 @@ const DisplayContainer = ({ todos }) => {
   console.log(todos);
   return (
     <>
-      <div>
+      <div className="display">
         <ul>
           {todos.map((todo) => {
             return <li>{todo.text}</li>;

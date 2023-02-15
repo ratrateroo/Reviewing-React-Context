@@ -8,7 +8,7 @@ const InputContainer = ({ addTodoHandler }) => {
   };
   return (
     <>
-      <div>
+      <div className={"input"}>
         <label>
           Todo:
           <input
