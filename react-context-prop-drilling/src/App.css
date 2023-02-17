@@ -41,7 +41,13 @@
   color: #888;
 }
 
+.app,
 .display,
-.input {
+.input,
+.label {
   box-sizing: border-box;
+  margin: 2rem;
+  padding: 2rem;
+  background-color: rgb(50, 200, 10, 0.5);
+  border: 1px solid black;
 }

@@ -6,10 +6,11 @@ const InputContainer = ({ addTodoHandler }) => {
   const submitHandler = () => {
     addTodoHandler(todo);
   };
+  console.log(todo);
   return (
     <>
       <div className={"input"}>
-        <label>
+        <label className="label">
           Todo:
           <input
             // value={todo.text}

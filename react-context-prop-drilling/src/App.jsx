@@ -1,5 +1,5 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+
 import "./App.css";
 import InputContainer from "./components/InputContainer";
 import DisplayContainer from "./components/DisplayContainer";
@@ -12,12 +12,16 @@ function App() {
     setTodos(todoList);
   };
 
+  const removeTodoHandler = (index) => {
+    const todoList = [...todos];
+    delete todoList[index];
+    setTodos(todoList);
+  };
+
   return (
-    <div className="App">
-      <div className="card">
-        <InputContainer addTodoHandler={addTodoHandler} />
-        <DisplayContainer todos={todos} />
-      </div>
+    <div className="app">
+      <InputContainer addTodoHandler={addTodoHandler} />
+      <DisplayContainer todos={todos} removeTodoHandler={removeTodoHandler} />
     </div>
   );
 }

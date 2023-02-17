@@ -1,14 +1,27 @@
 import { useState } from "react";
 
-const DisplayContainer = ({ todos }) => {
+const DisplayContainer = ({ todos, removeTodoHandler }) => {
   console.log(todos);
   return (
     <>
       <div className="display">
         <ul>
-          {todos.map((todo) => {
-            return <li>{todo.text}</li>;
-          })}
+          {todos
+            ? todos.map((todo, index) => {
+                return (
+                  <li>
+                    {todo.text}{" "}
+                    <button
+                      onClick={() => {
+                        removeTodoHandler(index);
+                      }}
+                    >
+                      Click
+                    </button>
+                  </li>
+                );
+              })
+            : null}
         </ul>
       </div>
     </>
