@@ -8,13 +8,19 @@ function App() {
   const [todos, setTodos] = useState([]);
   const addTodoHandler = (todo) => {
     const todoList = [...todos];
-    todoList.push(todo);
-    setTodos(todoList);
+    if (todo) {
+      todoList.push(todo);
+      setTodos(todoList);
+    } else {
+      console.log("Invalid Input:" + todo);
+    }
   };
 
   const removeTodoHandler = (index) => {
     const todoList = [...todos];
-    delete todoList[index];
+    const filteredTodo = todoList.filter((item) => item);
+    console.log(filteredTodo);
+    delete filteredTodo[index];
     setTodos(todoList);
   };
 

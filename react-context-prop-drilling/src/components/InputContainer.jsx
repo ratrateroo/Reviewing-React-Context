@@ -13,8 +13,14 @@ const InputContainer = ({ addTodoHandler }) => {
         <label className="label">
           Todo:
           <input
-            // value={todo.text}
-            onChange={(e) => setTodo({ text: e.target.value })}
+            //value={todo.text}
+            onChange={(e) => {
+              if (e.target.value) {
+                setTodo({ text: e.target.value });
+              } else {
+                console.log("empty");
+              }
+            }}
           />
         </label>
         <button
