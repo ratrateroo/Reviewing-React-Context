@@ -19,7 +19,7 @@ const DisplayContainer = ({ todos, removeTodoHandler }) => {
                   if (todo.text && todo) {
                     return (
                       <li>
-                        {todo.text}{" "}
+                        {`Text: ${todo.text} - ID: ${index}`}{" "}
                         <button
                           onClick={() => {
                             removeTodoHandler(index);

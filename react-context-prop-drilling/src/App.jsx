@@ -17,10 +17,14 @@ function App() {
   };
 
   const removeTodoHandler = (index) => {
+    console.log("clicked id: " + index);
     const todoList = [...todos];
-    const filteredTodo = todoList.filter((item) => item);
-    console.log(filteredTodo);
-    delete filteredTodo[index];
+
+    console.log("todoList");
+    console.log(todoList);
+    // const filteredTodo = todoList.filter((item) => item);
+    // console.log(filteredTodo);
+    delete todoList[index];
     setTodos(todoList);
   };
 
