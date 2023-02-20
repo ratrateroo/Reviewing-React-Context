@@ -18,11 +18,11 @@ const DisplayContainer = ({ todos, removeTodoHandler }) => {
               ? filteredTodos.map((todo, index) => {
                   if (todo.text && todo) {
                     return (
-                      <li>
-                        {`Text: ${todo.text} - ID: ${index}`}{" "}
+                      <li key={todo.id}>
+                        {`Text: ${todo.text} - ID: ${todo.id}`}{" "}
                         <button
                           onClick={() => {
-                            removeTodoHandler(index);
+                            removeTodoHandler(todo.id);
                           }}
                         >
                           Click

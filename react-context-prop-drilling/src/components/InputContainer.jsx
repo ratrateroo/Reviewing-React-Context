@@ -4,7 +4,14 @@ const InputContainer = ({ addTodoHandler }) => {
   const [todo, setTodo] = useState("");
 
   const submitHandler = () => {
-    addTodoHandler({ text: todo, id: Math.random() });
+    if (todo) {
+      addTodoHandler({
+        text: todo,
+        id: Math.floor(Math.random() * 90000) + 10000,
+      });
+    } else {
+      console.log("falsy");
+    }
   };
   console.log(todo);
   return (
@@ -18,7 +25,7 @@ const InputContainer = ({ addTodoHandler }) => {
               if (e.target.value) {
                 setTodo(e.target.value);
               } else {
-                console.log("empty");
+                setTodo("");
               }
             }}
           />

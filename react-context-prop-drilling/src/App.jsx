@@ -16,16 +16,14 @@ function App() {
     }
   };
 
-  const removeTodoHandler = (index) => {
-    console.log("clicked id: " + index);
-    const todoList = [...todos];
+  const removeTodoHandler = (id) => {
+    const newTodos = todos.filter((todo) => {
+      return todo.id === id ? false : true;
+    });
 
-    console.log("todoList");
-    console.log(todoList);
-    // const filteredTodo = todoList.filter((item) => item);
-    // console.log(filteredTodo);
-    delete todoList[index];
-    setTodos(todoList);
+    console.log(newTodos);
+
+    setTodos(newTodos);
   };
 
   return (
