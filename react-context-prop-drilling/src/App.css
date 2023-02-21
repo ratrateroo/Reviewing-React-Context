@@ -51,3 +51,7 @@
   background-color: rgb(50, 200, 10, 0.5);
   border: 1px solid black;
 }
+
+.todolist {
+  list-style: none;
+}

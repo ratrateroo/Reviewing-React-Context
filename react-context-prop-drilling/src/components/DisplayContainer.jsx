@@ -12,7 +12,7 @@ const DisplayContainer = ({ todos, removeTodoHandler }) => {
   return (
     <>
       <div className="display">
-        <ul>
+        <ul className="todolist">
           {filteredTodos
             ? filteredTodos.length !== 0
               ? filteredTodos.map((todo, index) => {
